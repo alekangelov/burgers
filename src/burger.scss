@@ -1,0 +1,85 @@
+$width: 100%;
+$height: 3px;
+$margin: 10px;
+
+button.burger {
+  outline: 0;
+  border: 0;
+  padding: 0;
+  width: 30px;
+  cursor: pointer;
+  height: 20px;
+  background: transparent;
+  span {
+    background: black;
+    position: relative;
+    height: $height;
+    display: block;
+    width: $width;
+    &:before,
+    &:after {
+      position: absolute;
+      content: " ";
+      background: black;
+      height: $height;
+      display: block;
+      top: -$margin;
+      width: $width;
+    }
+    &:after {
+      top: $margin;
+    }
+  }
+  &.active {
+    span {
+      background: transparent;
+      &:before {
+        transform: rotate(45deg);
+        top: 0;
+      }
+      &:after {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+    }
+  }
+}
+
+button.burger.boring {
+  span {
+    transition: 0s;
+    &:before,
+    &:after {
+    }
+    &:after {
+    }
+  }
+  &.active {
+    span {
+      &:before {
+      }
+      &:after {
+      }
+    }
+  }
+}
+
+button.burger.fade {
+  span {
+    transition: 0.5s background;
+    &:before,
+    &:after {
+      transition: 0.5s;
+    }
+    &:after {
+    }
+  }
+  &.active {
+    span {
+      &:before {
+      }
+      &:after {
+      }
+    }
+  }
+}
