@@ -1,3 +1,4 @@
-.burger {
-  background: blue; }
+button.burger{outline:0;border:0;padding:0;width:30px;cursor:pointer;height:20px;background:transparent}button.burger span{background:black;position:relative;height:3px;display:block;width:100%}button.burger span:before,button.burger span:after{position:absolute;content:" ";background:black;height:3px;display:block;top:-10px;width:100%}button.burger span:after{top:10px}button.burger.active span{background:transparent}button.burger.active span:before{transform:rotate(45deg);top:0}button.burger.active span:after{transform:rotate(-45deg);top:0}button.burger.boring span{transition:0s}button.burger.fade span{transition:0.5s background}button.burger.fade span:before,button.burger.fade span:after{transition:0.5s}
+
+body{background:#272727;margin:0;padding:0}#app{display:flex;flex-wrap:nowrap;align-content:stretch}#app .burgerParent{background:white;width:100px;height:100px;display:flex;align-content:center;justify-content:center;align-items:center}
 
