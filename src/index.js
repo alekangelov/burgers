@@ -1,5 +1,5 @@
-import * as burgers from "./burger.scss";
-import * as index from "./index.scss";
+import "./burger.scss";
+import "./index.scss";
 
 const body = document.querySelector("body");
 
