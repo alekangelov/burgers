@@ -11,7 +11,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: "burger.css",
+      filename: "[name].css",
       chunkFilename: "[id].css"
     })
   ],

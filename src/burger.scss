@@ -2,7 +2,7 @@ $width: 100%;
 $height: 3px;
 $margin: 10px;
 
-button.burger {
+.burger {
   outline: 0;
   border: 0;
   padding: 0;
@@ -64,7 +64,7 @@ button.burger.boring {
   }
 }
 
-button.burger.fade {
+.burger.fade {
   span {
     transition: 0.5s background;
     &:before,
@@ -75,6 +75,29 @@ button.burger.fade {
     }
   }
   &.active {
+    span {
+      &:before {
+      }
+      &:after {
+      }
+    }
+  }
+}
+
+.burger.spin {
+  transition: 0.5s transform ease-in-out;
+  transform: rotateY(0deg);
+  span {
+    transition: 0s background 0.25s;
+    &:before,
+    &:after {
+      transition: 0s 0.25s;
+    }
+    &:after {
+    }
+  }
+  &.active {
+    transform: rotateY(180deg);
     span {
       &:before {
       }
